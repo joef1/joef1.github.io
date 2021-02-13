@@ -1,0 +1,4 @@
+.page-id-21864 .vc_row .vc_col-sm-6 .mk-image,
+.page-id-21864 .vc_row .vc_col-sm-6 .mk-fancy-title  {
+ display: none;
+}

@@ -1,0 +1,214 @@
+/*
+Theme Name:		CE Metal
+Theme URI:		http://webfor.com/
+Description:	A customization of The Ken by Webfor
+Author:			Wes Button / Webfor
+Theme URI:		http://webfor.com/
+Template:		ken
+Version:		X
+*/
+
+
+/* CE Metal Color Scheme  ----
+	
+	Blackish	#1a1a1a
+	Slate Gray	#3c4650  /  Highlight #656f7a
+	Sharkfin	#a0aab4  /  Highlight #d0d6db
+	Orangeish	#c3925e
+	Soft Navy	#245487  /  Highlight #2f78af
+	
+---------------------------- */
+
+
+.opacity50 {
+	opacity: .5;
+}
+
+.widgettitle:after {
+    background-color: #a0aab4;
+    opacity: .25;
+}
+
+
+.widget_contact_info ul li span {
+    display: inline-block;
+    line-height: 21px;
+    vertical-align: middle;
+    font-size: 16px;
+    
+}
+#mk-header #mk-main-navigation .mk-header-logo {
+	margin-left: -45px !important;
+}
+
+.widget_contact_info,
+.widget_contact_info *,
+.widget_contact_info ul li a {
+	color: #5C6065 !important;
+}
+
+#mk-footer .widget_contact_info,
+#mk-footer .widget_contact_info *,
+#mk-footer .widget_contact_info ul li a {
+	color: #a0aab4 !important;
+}
+
+ul#gform_fields_1 input,
+ul#gform_fields_1 textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input#gform_submit_button_1 {
+    border: 2px solid #a0aab4 !important;
+}
+
+#gform_1 .gform_footer {
+	padding: 0; margin: 0;
+}
+
+.mk-button {
+	font-size: 16px;
+}
+
+.responsive-nav-link .mk-burger-icon {
+    border: 2px solid #a0aab4;
+    box-sizing: content-box !important;
+    padding: 10px 10px 3px;
+}
+
+ul li {
+    text-align: left !important;
+}
+
+#mk-breadcrumbs .mk-breadcrumbs-inner {
+	color: rgba(161, 171, 181, 0.25) !important;
+}
+
+#mk-breadcrumbs .mk-breadcrumbs-inner a {
+	color: #a0aab4 !important;
+}
+
+#mk-breadcrumbs .mk-breadcrumbs-inner a:hover {
+	color: #F0F0F0 !important;
+}
+
+/* Footer Social Icons */
+#search-3 {
+	margin-bottom: 15px;
+}
+#social-2 {
+	margin-left: -7.5px;
+}
+#social-2 img {
+	max-width: 30px;
+}
+#social-2 a:hover img {
+	opacity: .85;
+}
+
+
+
+/*** Blog Styling ***/
+
+#mk-page-title h1.mk-page-heading {
+	color: #f0f0f0;
+}
+
+#mk-breadcrumbs a {
+	opacity: .5;
+}
+
+.single #mk-page-title {
+	padding-bottom: 20px;
+}
+
+.single #mk-page-heading {
+	margin-top: 10px;
+}
+
+.single #mk-breadcrumbs {
+	margin: 10px auto 0;
+	padding: 0 20px;
+}
+
+.widget_posts_tabs .mk-tabs-tabs {
+	border-color: #e4e4e4;
+}
+
+#mk-sidebar li.ui-state-active {
+	background-color: #9fa8b2;
+}
+
+#mk-sidebar li.ui-state-active a {
+	color: #f0f0f0 !important;
+}
+
+#mk-sidebar li.ui-state-active:hover a {
+	color: #e4e4e4 !important;
+}
+
+#mk-sidebar .widget_posts_tabs .mk-tabs-pane li {
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+#mk-sidebar .blog-comments,
+#mk-sidebar .mk-love-holder {
+	display: none;
+}
+
+.widget_posts_tabs .mk-tabs-pane li .post-list-meta .cats, 
+.widget_posts_tabs .mk-tabs-pane li .post-list-meta time {
+	font-size: 13px;
+}
+
+#mk-sidebar .widget_posts_tabs .mk-tabs-pane li .post-list-title {
+	font-size: 14px;
+}
+
+/* Blog Sidebar */
+
+
+
+
+
+/* fix jupiters responsive quirkyness */
+
+@media (min-width: 1141px) {
+	ul#menu-main-menu {
+  	  margin-left: -18px;
+	}
+	#mk-header #mk-main-navigation .mk-header-logo {
+		margin-left: 0 !important;
+	}
+}
+@media (max-width: 1141px;)
+
+@media (max-width: 1024px) {
+	#home-header {
+		padding: 85px 0;
+	}
+}
+
+@media (max-width: 767px) {
+	#home-header {
+		padding: 40px 0 80px;
+	}
+	
+	.home-intro-headline.mk-fancy-title p {
+		line-height: 38px !important;
+		font-size: 28px !important;
+		padding: 0 30px !important;
+	}
+	
+	.home-intro-subline {display: none !important}
+	
+	#mk-main-navigation .mk-header-logo { margin-left: -30px !important }
+}
+
+@media (max-width: 500px) {
+	.single #mk-page-title {
+		padding-bottom: 40px;
+	}
+}
