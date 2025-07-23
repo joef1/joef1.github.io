@@ -8,10 +8,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <![endif]-->
 
+        <!-- Performance Optimization: Resource Hints -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="dns-prefetch" href="//s.w.org">
+        
+        <!-- Performance Optimization: Preload critical resources -->
+        <link rel="preload" href="Logo.png" as="image" type="image/png">
+        <link rel="preload" href="page.css" as="style">
+        <link rel="preload" href="mk.css" as="style">
         
         <title>
         Dec's Metal Fabrication, LLC</title>
                   <link rel="shortcut icon" href="Logo.png"  /> <!--PIC HERE-->
+
+        <!-- Performance Optimization: Modern font loading with font-display swap -->
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"></noscript>
         
          <!--[if lte IE 11]>
          <link rel='stylesheet' href='https://www.decsmetal.com/ie.css' />
@@ -99,23 +112,8 @@ window.matchMedia || (window.matchMedia = function() {"use strict"; var styleMed
            var mk_header_trans_offset = 120;
                    </script>
 
-                        <script>
-                            /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
-                            if ( typeof WebFontConfig === "undefined" ) {
-                                WebFontConfig = new Object();
-                            }
-                            WebFontConfig['google'] = {families: ['Montserrat:400,700&subset=latin']};
-
-                            (function() {
-                                var wf = document.createElement( 'script' );
-                                wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js';
-                                wf.type = 'text/javascript';
-                                wf.async = 'true';
-                                var s = document.getElementsByTagName( 'script' )[0];
-                                s.parentNode.insertBefore( wf, s );
-                            })();
-                        </script>
-                    
+        <!-- Performance Optimization: Remove old webfont loader, using modern approach above -->
+        
 	<!-- This site is optimized with the Yoast SEO plugin v15.6.2 - https://yoast.com/wordpress/plugins/seo/ -->
 	<meta name="description" content="Dec's Metal Fabrication provides top quality workmanship with superior materials creating the best Commercial, Industrial &amp; Decorative metal fabrication." />
 	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -131,7 +129,7 @@ window.matchMedia || (window.matchMedia = function() {"use strict"; var styleMed
 	<!-- / Yoast SEO plugin. -->
 
 
-<link rel='dns-prefetch' href='//s.w.org' />
+<!-- Performance Optimization: Removed duplicate dns-prefetch, already added above -->
 		<script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/decsmetal.com\/wp-emoji-release.min.js"}};
 			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -150,10 +148,12 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
+<!-- Performance Optimization: Critical CSS loading -->
 <link rel='stylesheet' id='theme-styles-css'  href='page.css' type='text/css' media='all' />
 <link rel='stylesheet' id='theme-icons-css'  href='icon.css' type='text/css' media='all' />
 <link rel='stylesheet' id='wp-block-library-css'  href='block.css' type='text/css' media='all' />
-<link rel='stylesheet' id='js_composer_front-css'  href='js.css' type='text/css' media='all' />
+<!-- Performance Optimization: Load large CSS files with low priority -->
+<link rel='stylesheet' id='js_composer_front-css'  href='js.css' type='text/css' media='print' onload="this.media='all'" />
 <link rel='stylesheet' id='theme-options-css'  href='theme.css' type='text/css' media='all' />
 <link rel='stylesheet' id='mk-style-css'  href='mk.css' type='text/css' media='all' />
 <style id='theme-dynamic-styles-inline-css' type='text/css'>
@@ -190,7 +190,8 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 	              <div class="burger-icon-2"></div>
 	              <div class="burger-icon-3"></div>
             	</div>
-		</li><li class="mk-header-logo  "><a href="https://www.decsmetal.com/" title="Dec's Metal Fabrication"><img alt="Dec's Metal Fabrication" class="mk-dark-logo" src="Logo.png" data-retina-src="Logo.png" /></a></li><li id="menu-item-21910" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-20 current_page_item no-mega-menu"><a class="menu-item-link"  href="https://www.decsmetal.com/">Home</a></li>
+		</li><li class="mk-header-logo  "><a href="https://www.decsmetal.com/" title="Dec's Metal Fabrication"><img alt="Dec's Metal Fabrication" class="mk-dark-logo" src="Logo.png" data-retina-src="Logo.png" loading="eager" /></a></li>
+<li id="menu-item-21910" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-20 current_page_item no-mega-menu"><a class="menu-item-link"  href="https://www.decsmetal.com/">Home</a></li>
 <li id="menu-item-22228" class="menu-item menu-item-type-post_type menu-item-object-page no-mega-menu"><a class="menu-item-link"  href="https://www.decsmetal.com/capabilities">Photos</a>
 </li>
 <li id="menu-item-21907" class="menu-item menu-item-type-post_type menu-item-object-page no-mega-menu"><a class="menu-item-link"  href="https://www.decsmetal.com/hiring">We're Hiring</a>
@@ -227,15 +228,15 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 	</div></div><div class="clearboth"></div></div><div class="clearboth"></div></div><div class="mk-main-wrapper-holder"><div class="theme-page-wrapper full-layout mk-grid vc_row-fluid no-padding"><div class="theme-content no-padding"></div></div></div><div  id="home-comindres"   class="vc_row wpb_row vc_row-fluid js-master-row  mk-fullwidth-true add-padding-0 attched-true ">
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
-			<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1415372138161"><div class="wpb_wrapper"><div id="box-5" class="mk-custom-boxed mk-shortcode    hover-effect-image "><div class="box-holder"><h4  style="font-size: 32px;text-align:center;line-height:32px;letter-spacing:0px;color: #ffffff;font-weight:bold;margin-bottom:30px; margin-top:0px; text-transform:uppercase; " id="fancy-title-6" class="mk-fancy-title responsive-align-center simple-title center-align   "><span class="fancy-title-span pointed" >
+			<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1415372138161"><div class="wpb_wrapper"><div id="box-5" class="mk-custom-boxed mk-shortcode    hover-effect-image " onclick="location.href='commercial-metal-fabrication.html'" style="cursor: pointer;"><div class="box-holder"><h4  style="font-size: 32px;text-align:center;line-height:32px;letter-spacing:0px;color: #ffffff;font-weight:bold;margin-bottom:30px; margin-top:0px; text-transform:uppercase; " id="fancy-title-6" class="mk-fancy-title responsive-align-center simple-title center-align   "><span class="fancy-title-span pointed" >
 <p><span style="font-weight: 400;">Commercial</span></p>
 </span></h4>
 
-<div class="clearboth"></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1415372147884"><div class="wpb_wrapper"><div id="box-8" class="mk-custom-boxed mk-shortcode    hover-effect-image "><div class="box-holder"><h4  style="font-size: 32px;text-align:center;line-height:32px;letter-spacing:0px;color: #ffffff;font-weight:bold;margin-bottom:30px; margin-top:0px; text-transform:uppercase; " id="fancy-title-9" class="mk-fancy-title responsive-align-center simple-title center-align   "><span class="fancy-title-span pointed" >
+<div class="clearboth"></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1415372147884"><div class="wpb_wrapper"><div id="box-8" class="mk-custom-boxed mk-shortcode    hover-effect-image " onclick="location.href='residential-hvac-services.html'" style="cursor: pointer;"><div class="box-holder"><h4  style="font-size: 32px;text-align:center;line-height:32px;letter-spacing:0px;color: #ffffff;font-weight:bold;margin-bottom:30px; margin-top:0px; text-transform:uppercase; " id="fancy-title-9" class="mk-fancy-title responsive-align-center simple-title center-align   "><span class="fancy-title-span pointed" >
 <p><span style="font-weight: 400;">Residential</span></p>
 </span></h4>
 
-<div class="clearboth"></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1415372162605"><div class="wpb_wrapper"><div id="box-11" class="mk-custom-boxed mk-shortcode    hover-effect-image "><div class="box-holder"><h4  style="font-size: 32px;text-align:center;line-height:32px;letter-spacing:0px;color: #ffffff;font-weight:bold;margin-bottom:30px; margin-top:0px; text-transform:uppercase; " id="fancy-title-12" class="mk-fancy-title responsive-align-center simple-title center-align   "><span class="fancy-title-span pointed" >
+<div class="clearboth"></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner vc_custom_1415372162605"><div class="wpb_wrapper"><div id="box-11" class="mk-custom-boxed mk-shortcode    hover-effect-image " onclick="location.href='custom-metal-fabrication.html'" style="cursor: pointer;"><div class="box-holder"><h4  style="font-size: 32px;text-align:center;line-height:32px;letter-spacing:0px;color: #ffffff;font-weight:bold;margin-bottom:30px; margin-top:0px; text-transform:uppercase; " id="fancy-title-12" class="mk-fancy-title responsive-align-center simple-title center-align   "><span class="fancy-title-span pointed" >
 <p><span style="font-weight: 400;">Custom</span></p>
 </span></h4>
 
@@ -245,19 +246,19 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 			<h3  style="font-size: 22px;text-align:center;line-height:22px;letter-spacing:0px;color: #444444;font-weight:bold;margin-bottom:0px; margin-top:0px; text-transform:uppercase; " id="fancy-title-14" class="mk-fancy-title responsive-align-center simple-title center-align   "><span class="fancy-title-span pointed" >
 <h1>Dec's Metal Fabrication</h1>
 </span></h3><div id="divider-15" style="padding: 25px 0px 40px 0px;" class="mk-divider divider_custom_width divider-single  "><div style="border-color:#d7d7d7;" class="divider-inner"></div></div><div class="clearboth"></div><div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="mk-text-block responsive-align-center  "><p style="text-align: center;">Dec's Metal specializes in crafting custom residential, commercial, and public sector HVAC ductwork. We are qualified to handle public works and prevailing wage projects for government contracts. With over 20 years of experience, you can count on us to get the job done right. Our 1600 square foot facility is home to American Made Vicon machinery and a team you can trust.</p>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="mk-text-block responsive-align-center  "><p style="text-align: center;">Dec's Metal specializes in crafting custom residential, commercial, and public sector HVAC ductwork and custom sheet metal fabrication. We are qualified to handle public works projects. With over 20 years of experience, you can count on us to get the job done right. Our 1600 square foot facility is home to American Made Vicon machinery and a team you can trust.</p>
 <p style="text-align: center;"><strong>Contact us now for a quote! </strong></p>
 <div class="clearboth"></div></div> </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
-</div></div></div></div><div class="mk-image circular-false align-center style1-image  opacity50" style="max-width: 200px; margin-bottom:0px; margin-top:60px" onClick="return true"><img alt="Dec's Metal Fabrication" title="Dec's Metal Fabrication" src="Logo.png" /><div class="clearboth"></div></div>
+</div></div></div></div><div class="mk-image circular-false align-center style1-image  " style="max-width: 2600px; margin-bottom:20px" onClick="return true"><img alt="Machine Part Fabrication" title="Machine Part Fabrication" src="Photo9.jpg" loading="lazy" /><div class="clearboth"></div></div>
 	</div></div><div class="clearboth"></div></div></div></div><div   data-intro-effect="false" class="page-section-16  expandable-false fullwidth-false section-expandable-false full-height-false  mk-video-holder mk-page-section parallax-false  " data-direction="vertical"><div class="bg-layer clip"><div  class="mk-video-color-mask"></div></div><div class="mk-half-layout half_right_layout" style="background-image:url(Photo2.jpg);"></div><div class="mk-half-layout-container page-section-content expandable-false half_right_layout">
 	<div style="" class="vc_col-sm-12 wpb_column column_container ">
 			<h3  style="font-size: 32px;text-align:left;line-height:32px;letter-spacing:0px;color: #ffffff;font-weight:bold;margin-bottom:35px; margin-top:0px; text-transform:uppercase; " id="fancy-title-17" class="mk-fancy-title responsive-align-center simple-title left-align   "><span class="fancy-title-span pointed" >
 <p>OUR PROMISE</p>
-</span></h3><div class="mk-text-block responsive-align-left  "><p><span style="font-weight: 400; color: #a0aab4;"> Dec's Metal has become known as a leading metal fabrication shop with a focus on accuracy and precision, ensuring your order is right the first time. You can count on us to handle your projects on time and within budget, including public works and government contracts requiring prevailing wage compliance. We only use the highest quality materials made here in the USA. </span></p>
+</span></h3><div class="mk-text-block responsive-align-left  "><p><span style="font-weight: 400; color: #a0aab4;"> Dec's Metal has become known as a leading metal fabrication shop with a focus on accuracy and precision, ensuring your order is right the first time. You can count on us to handle your projects on time and within budget, including public works contracts requiring prevailing wage compliance. We only use the highest quality materials made here in the USA. </span></p>
 <div class="clearboth"></div></div> 
 	</div></div><div class="clearboth"></div><div class="clearboth"></div></div><div class="mk-main-wrapper-holder"><div class="theme-page-wrapper full-layout mk-grid vc_row-fluid no-padding"><div class="theme-content no-padding"><div   class="vc_row wpb_row vc_row-fluid js-master-row  mk-fullwidth-false attched-false ">
 	<div style="" class="vc_col-sm-12 wpb_column column_container vc_custom_1415367591387 ">
-			<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="mk-image circular-false align-center style1-image  " style="max-width: 2600px; margin-bottom:20px" onClick="return true"><img alt="Machine Part Fabrication" title="Machine Part Fabrication" src="Photo9.jpg" /><div class="clearboth"></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><h4  style="font-size: 24px;text-align:left;line-height:24px;letter-spacing:0px;color: #444444;font-weight:bold;margin-bottom:10px; margin-top:0px; text-transform:uppercase; " id="fancy-title-18" class="mk-fancy-title responsive-align-center simple-title left-align   "><span class="fancy-title-span pointed" >
+			<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="mk-image circular-false align-center style1-image  " style="max-width: 2600px; margin-bottom:20px" onClick="return true"><img alt="Machine Part Fabrication" title="Machine Part Fabrication" src="Photo9.jpg" loading="lazy" /><div class="clearboth"></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><h4  style="font-size: 24px;text-align:left;line-height:24px;letter-spacing:0px;color: #444444;font-weight:bold;margin-bottom:10px; margin-top:0px; text-transform:uppercase; " id="fancy-title-18" class="mk-fancy-title responsive-align-center simple-title left-align   "><span class="fancy-title-span pointed" >
 <p> Our Work Speaks for itself</p>
 </span></h4><div class="mk-text-block responsive-align-center  "><p>We hold ourselves to the highest standards and don't cut corners (except when you need us to!)</p>
 <div class="clearboth"></div></div> <div class="clearboth"></div><div class="mk-shortcode mk-padding-shortcode " style="height:20px"></div><div class="clearboth"></div><div class="mk-button-align left"><a href="capabilities.html" target="_self"  class="mk-button btn-19  outline-button large pointed   "><span>
@@ -290,7 +291,7 @@ CONTACT US
 <section id="mk-footer" class="" role="contentinfo" itemscope="itemscope" itemtype="https://schema.org/WPFooter" >
 <div class="footer-wrapper mk-grid ">
 <div class="mk-padding-wrapper">
-			<div class="mk-col-1-3"><section id="text-1" class="widget widget_text">			<div class="textwidget"><img src="Logo.png" alt="logo">
+			<div class="mk-col-1-3"><section id="text-1" class="widget widget_text">			<div class="textwidget"><img src="Logo.png" alt="Dec's Metal Fabrication Logo" loading="lazy">
 <span style="display:block; margin-top:30px;font-weight:bold;font-size:21px;">DEC'S METAL FABRICATION, LLC</span></div>
 		</section></div>
 			<div class="mk-col-1-3"><section id="contact_info-2" class="widget widget_contact_info"><div class="widgettitle">CONTACT INFO</div>		<ul itemscope="itemscope" itemtype="https://schema.org/Person" ><li><i class="mk-theme-icon-phone"></i><span>(908)-281-0283</span></li><li><i class="mk-theme-icon-fax"></i><span>(908)-431-0993</span></li><li><i class="mk-li-pinmap"></i><span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">27E Kearney Street Unit B Bridgewater, NJ 08807</span></li><li><i class="mk-icon-envelope-o"></i><span><a href="mailto:d&#101;&#99;s&#109;e&#116;al&#64;g&#109;ail&#46;co&#109;">d&#101;&#99;s&#109;eta&#108;&#64;g&#109;&#97;&#105;l&#46;&#99;&#111;m</a></span></li></ul></section></div>
